@@ -20,16 +20,16 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+      <profile default="false" name="Annotation profile for selenium_java" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="webdriver-java-quickstart-archetype" />
+        <module name="selenium_java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="webdriver-java-quickstart-archetype" target="1.5" />
+      <module name="selenium_java" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
