@@ -77,14 +77,14 @@
       </activation>
     </profile>
     <profile>
-      <id>dev</id>
+      <id>chrome_local</id>
       <properties>
         <env>dev</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>http://devhost/</site.url>
-        <browser.name>firefox</browser.name>
+        <site.url>http://192.168.1.53:8080/</site.url>
+        <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>

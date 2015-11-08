@@ -2,8 +2,7 @@ package ru.st.selenium;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.testng.annotations.AfterSuite;
@@ -23,6 +22,19 @@ public class TestBase {
 
 	protected String baseUrl;
 
+	public void AdminLogin() throws Exception {
+		driver.get(baseUrl + "/php4dvd/");
+		driver.findElement(By.id("username")).clear();
+		driver.findElement(By.id("username")).sendKeys("admin");
+		driver.findElement(By.name("password")).clear();
+		driver.findElement(By.name("password")).sendKeys("admin");
+		driver.findElement(By.name("submit")).click();
+		Thread.sleep(100);
+	}
+	public void AdminHome() throws Exception {
+		driver.get(baseUrl + "/php4dvd/");
+		Thread.sleep(100);
+	}
 	@BeforeClass
 	public void init() {
 		baseUrl = PropertyLoader.loadProperty("site.url");
@@ -41,7 +53,18 @@ public class TestBase {
 		} else {
 			driver = WebDriverFactory.getDriver(capabilities);
 		}
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		try {
+			AdminLogin();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@AfterSuite(alwaysRun = true)

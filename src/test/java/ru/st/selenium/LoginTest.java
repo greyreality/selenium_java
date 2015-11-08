@@ -17,7 +17,7 @@ public class LoginTest extends ru.st.selenium.TestBase {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @Test
+  //  @Test
     public void testUntitled() throws Exception {
         driver.get(baseUrl + "/php4dvd/");
         driver.findElement(By.id("username")).clear();
