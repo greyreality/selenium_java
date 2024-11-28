@@ -1,12 +1,24 @@
+# OS metadata
+.DS_Store
+
+# Idea
+.idea
+.idea/compiler.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/jarRepositories.xml
 *.class
+*.iml
+
+# Test report
 test-output
 target
-.idea/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.ear
